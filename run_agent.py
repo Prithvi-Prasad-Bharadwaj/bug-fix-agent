@@ -1,7 +1,7 @@
 from agent.loop import fix_repo
 from agent.tools import run_tests
 
-repo = "buggy_repos/repo_01"
+repo = "buggy_repos/repo_03"
 
 print("BEFORE:")
 print(run_tests(repo))
