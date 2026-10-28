@@ -2,6 +2,7 @@ import subprocess
 import sys
 
 def read_file(path):
+    """Read a file and return its text."""
     with open(path, "r") as f:
         return f.read()
     
@@ -26,11 +27,13 @@ What with does: when the indented lines finish, Python closes the book for you. 
 '''
 
 def edit_file(path, new_content):
+    """Overwrite a file with new_content. Send the WHOLE new file, because the old text is erased."""
     with open(path, "w") as f:
         f.write(new_content)
     return "File updated"
 
 def run_tests(repo_folder):
+    """Run pytest inside repo_folder and return the test report. Use this to see what fails and to check a fix."""
     result = subprocess.run(
         [sys.executable, "-m", "pytest"],
         cwd=repo_folder,
