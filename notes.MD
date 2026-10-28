@@ -33,3 +33,6 @@ The rule says 18 and above can ride. age > 18 means “older than 18”, so a pe
 '''
 
 Bug: `>` instead of `>=`. Fix: age >= 18.
+
+## repo_04 - stats.py
+Bug: max() crashes on an empty list. Fix: return None when numbers is empty.
