@@ -1,8 +1,8 @@
 import subprocess
 import sys
 
-def read_file(path):
-    """Read a file and return its text."""
+def read_file(path: str) -> str:
+    """Read a file and return its text. Use this to look at code or test files."""
     with open(path, "r") as f:
         return f.read()
     
@@ -26,13 +26,13 @@ This works exactly the same way. Programmers use f because it’s short.
 What with does: when the indented lines finish, Python closes the book for you. You don’t have to remember to close it.
 '''
 
-def edit_file(path, new_content):
+def edit_file(path: str, new_content: str) -> str:
     """Overwrite a file with new_content. Send the WHOLE new file, because the old text is erased."""
     with open(path, "w") as f:
         f.write(new_content)
     return "File updated"
 
-def run_tests(repo_folder):
+def run_tests(repo_folder: str) -> str:
     """Run pytest inside repo_folder and return the test report. Use this to see what fails and to check a fix."""
     result = subprocess.run(
         [sys.executable, "-m", "pytest"],
