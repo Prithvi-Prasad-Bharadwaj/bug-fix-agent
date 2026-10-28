@@ -1,3 +1,4 @@
-from agent.tools import read_file
+from agent.tools import read_file, edit_file
 
-print(read_file("buggy_repos/repo_01/calculator.py"))
+print(edit_file("scratch.txt", "hello from the robot"))
+print(read_file("scratch.txt"))

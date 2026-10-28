@@ -21,3 +21,8 @@ This works exactly the same way. Programmers use f because it’s short.
 
 What with does: when the indented lines finish, Python closes the book for you. You don’t have to remember to close it.
 '''
+
+def edit_file(path, new_content):
+    with open(path, "w") as f:
+        f.write(new_content)
+    return "File updated"
