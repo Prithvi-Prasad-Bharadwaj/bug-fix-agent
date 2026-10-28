@@ -1,4 +1,3 @@
-from agent.tools import read_file, edit_file
+from agent.tools import run_tests
 
-print(edit_file("scratch.txt", "hello from the robot"))
-print(read_file("scratch.txt"))
+print(run_tests("buggy_repos/repo_01"))

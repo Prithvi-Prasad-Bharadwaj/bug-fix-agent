@@ -1,3 +1,6 @@
+import subprocess
+import sys
+
 def read_file(path):
     with open(path, "r") as f:
         return f.read()
@@ -26,3 +29,12 @@ def edit_file(path, new_content):
     with open(path, "w") as f:
         f.write(new_content)
     return "File updated"
+
+def run_tests(repo_folder):
+    result = subprocess.run(
+        [sys.executable, "-m", "pytest"],
+        cwd=repo_folder,
+        capture_output=True,
+        text=True,
+    )
+    return result.stdout
